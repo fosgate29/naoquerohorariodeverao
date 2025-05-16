@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eu não quero horário de verão</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-1W0NGT45Y5');
+  </script>
+
+  <style>
+    header {
+      background-image: url('https://cdn.pixabay.com/photo/2020/09/06/13/33/clock-5546540_1280.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-shadow: 2px 2px 5px black;
+      padding: 100px 0;
+    }
+    canvas {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body class="bg-light text-dark">
+
+  <header class="text-center">
+    <h1 class="display-4 fw-bold">Eu não quero horário de verão</h1>
+    <p class="lead">Malefícios à saúde e economia irrelevante de energia</p>
+  </header>
+
+  <div class="container py-5">
+    <div class="p-4 bg-white rounded shadow-sm">
+      <h2 class="text-danger mb-3">⏰ O problema com o horário de verão</h2>
+      <p>O horário de verão interfere no nosso <strong>relógio biológico</strong>, desregulando o sono e aumentando riscos à saúde. Ele também não gera economia de energia significativa nos tempos modernos.</p>
+
+      <h4 class="mt-4">😴 Efeitos negativos à saúde:</h4>
+      <ul>
+        <li>Insônia e dificuldade para dormir nos primeiros dias.</li>
+        <li>Desregulação hormonal e aumento do estresse.</li>
+        <li>Maior risco de doenças cardiovasculares.</li>
+        <li>Redução na produtividade e no bem-estar geral.</li>
+      </ul>
+
+      <h4 class="mt-4">📉 Economia de energia cada vez menor:</h4>
+      <p>Com o uso de iluminação LED e maior uso de ar-condicionado no fim do dia, os benefícios energéticos praticamente desapareceram.</p>
+
+      <canvas id="graficoEconomia" class="my-4"></canvas>
+
+      <blockquote class="blockquote">
+        <p>"A economia de energia não é mais relevante como era no passado."</p>
+        <footer class="blockquote-footer">Ministério de Minas e Energia</footer>
+      </blockquote>
+
+      <h4 class="text-primary mt-5">🔗 Fontes de informação</h4>
+
+      <h6 class="mt-3">💡 Economia de energia</h6>
+      <ul>
+        <li><a href="https://g1.globo.com/economia/noticia/governo-decide-manter-horario-de-verao-em-2017.ghtml" target="_blank">Ministério de Minas e Energia – G1</a></li>
+        <li><a href="https://agenciabrasil.ebc.com.br/geral/noticia/2019-04/horario-de-verao-e-extinto-por-decreto-de-bolsonaro" target="_blank">ONS – Agência Brasil</a></li>
+        <li><a href="https://exame.com/brasil/entenda-por-que-o-horario-de-verao-nao-e-mais-efetivo/" target="_blank">CPFL Energia – Exame</a></li>
+      </ul>
+
+      <h6 class="mt-4">🧠 Malefícios à saúde</h6>
+      <ul>
+        <li><a href="https://www.endocrino.org.br/horario-de-verao-e-saude/" target="_blank">SBEM – Endocrinologia</a></li>
+        <li><a href="https://www.uol.com.br/vivabem/noticias/redacao/2022/09/26/medicos-do-sono-defendem-o-fim-do-horario-de-verao.htm" target="_blank">Associação Brasileira do Sono – UOL</a></li>
+        <li><a href="https://www.acc.org/About-ACC/Press-Releases/2014/03/30/14/58/Spring-Daylight-Saving-Time-Tied-to-Heart-Attack-Risk" target="_blank">Universidade de Michigan – ACC</a></li>
+      </ul>
+
+      <div class="text-center mt-5">
+        <h4 class="text-danger">#FiqueNoHorárioCerto</h4>
+        <p>Respeite seu corpo. Diga não ao horário de verão!</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-white text-center py-3">
+    Criado por um defensor do bem-estar biológico | 2025
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('graficoEconomia').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['2010', '2014', '2017', '2019'],
+        datasets: [{
+          label: 'Economia de energia (%)',
+          data: [1.2, 0.8, 0.5, 0.2],
+          backgroundColor: 'rgba(220, 53, 69, 0.7)'
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: 'Redução da economia de energia com o horário de verão (Brasil)',
+            font: {
+              size: 16
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 1.5
+          }
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
